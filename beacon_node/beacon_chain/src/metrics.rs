@@ -259,7 +259,7 @@ pub static UNAGGREGATED_ATTESTATION_GOSSIP_VERIFICATION_TIMES: LazyLock<Result<H
     LazyLock::new(|| {
         try_create_histogram(
             "beacon_unaggregated_attestation_gossip_verification_seconds",
-            "Full runtime of aggregated attestation gossip verification",
+            "Full runtime of unaggregated attestation gossip verification",
         )
     });
 
