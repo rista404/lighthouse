@@ -369,7 +369,7 @@ pub static ATTESTATION_PROCESSING_STATE_SKIP_TIMES: LazyLock<Result<Histogram>> 
     LazyLock::new(|| {
         try_create_histogram(
             "beacon_attestation_processing_state_skip_seconds",
-            "Time spent on reading the state during attestation processing",
+            "Time spent on skipping the state during attestation processing",
         )
     });
 pub static ATTESTATION_PROCESSING_SIGNATURE_SETUP_TIMES: LazyLock<Result<Histogram>> =
@@ -1361,7 +1361,7 @@ pub static BEACON_BLOB_DELAY_ALL_OBSERVED_SLOT_START: LazyLock<Result<IntGauge>>
     LazyLock::new(|| {
         try_create_int_gauge(
             "beacon_blob_delay_all_observed_slot_start",
-            "Duration between the start of the block's slot and the time the block was observed.",
+            "Duration between the start of the block's slot and the time when all blobs have been observed.",
         )
     });
 
