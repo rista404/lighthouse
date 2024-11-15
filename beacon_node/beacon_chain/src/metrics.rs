@@ -1357,13 +1357,14 @@ pub static BEACON_BLOCK_DELAY_OBSERVED_SLOT_START: LazyLock<Result<IntGauge>> =
         )
     });
 
-pub static BEACON_BLOB_DELAY_ALL_OBSERVED_SLOT_START: LazyLock<Result<IntGauge>> =
-    LazyLock::new(|| {
+pub static BEACON_BLOB_DELAY_ALL_OBSERVED_SLOT_START: LazyLock<Result<IntGauge>> = LazyLock::new(
+    || {
         try_create_int_gauge(
             "beacon_blob_delay_all_observed_slot_start",
             "Duration between the start of the block's slot and the time when all blobs have been observed.",
         )
-    });
+    },
+);
 
 pub static BEACON_BLOCK_DELAY_CONSENSUS_VERIFICATION_TIME: LazyLock<Result<IntGauge>> =
     LazyLock::new(|| {
